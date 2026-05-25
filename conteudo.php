@@ -17,10 +17,12 @@
     <div class="col"></div>
 </div>
 <?php 
-if($_GET["erro"]==1){
+if(isset($_GET["erro"]) && $_GET["erro"]==1){
     ?>
 <div class="row">
-    <div class="col bg-danger"> Erro ao validar dados</div>
+    <div class="col"></div>
+    <div class="col bg-danger mt-3 rounded"> Erro ao validar dados</div>
+    <div class="col"></div>
 </div>
 <?php }else {
 

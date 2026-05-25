@@ -1,5 +1,6 @@
 <?php
-require_once "Pagina.php";
+require_once "autoload.php";
+
 $dsn = "mysql:host=localhost;dbname=bd;port=3306";
 $username = "root";
 $password = "";
@@ -14,8 +15,10 @@ if($resultado->rowCount()>0){
     $pg = new Pagina();
     $pg->index("pagina_principal");
 } else { 
-    echo "usuario ou senha invalida";
-    echo "<a href=\"index.php?erro=1\">voltar</a>";
+    header("Location: index.php?erro=1");
+//     echo "usuario ou senha invalida";
+//     echo "<a href=\"index.php?erro=1\">voltar</a>";
+// 
 }
 
 ?>

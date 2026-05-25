@@ -5,10 +5,8 @@ protected $header;
 protected $content;
 protected $footer;
 
-public function __contruct(){
-    $this->header = inc("header");
-    //$this->content =  inc($conteudo);
-    $this->footer = inc("footer");
+public function __construct(){
+    
 }
 public function index($conteudo){
  include $this->header = "header.php";
@@ -17,5 +15,13 @@ public function index($conteudo){
 }
 private function inc($nome_pagina){
     return $nome_pagina.".php";
+}
+
+public function listarUsuarios() { 
+ include $this->inc("header");
+ include $this->inc("menu");
+ include $this->inc("listagem_usuarios");
+ include $this->inc("footer");
+
 }
 }
